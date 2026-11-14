@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahida's Online Learning Hub</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7fc; color: #2c3e50; line-height: 1.6; }
+        
+        /* Header Styling with Overlay */
+        header { 
+            background: linear-gradient(rgba(30, 60, 114, 0.85), rgba(42, 82, 152, 0.9)), url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #fff; 
+            padding: 60px 20px; 
+            text-align: center; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        header h1 { font-size: 2.8rem; margin-bottom: 12px; font-weight: 700; }
+        header p { font-size: 1.2rem; opacity: 0.95; max-width: 650px; margin: 0 auto; }
+        
+        /* Online Tag Badge */
+        .online-tag {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Hero Banner */
+        
+
+/* Premium Magical Hero Section */
+.hero {
+    background: linear-gradient(135deg, #667eea, #764ba2, #3498db);
+    color: white;
+    padding: 65px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+    text-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+}
+
+.hero h2,
+.hero p {
+    position: relative;
+    z-index: 1;
+}
+
+        /* Container */
+        .container { max-width: 950px; margin: 40px auto; padding: 0 20px; }
+        
+        .section-title { text-align: center; font-size: 2rem; color: #1e3c72; margin-bottom: 30px; font-weight: 700; }
+        
+        /* Cards Grid with Images */
+        .grid { display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; margin-bottom: 50px; }
+        .card { 
+            background: white; 
+            border-radius: 14px; 
+            flex: 1 1 270px; 
+            max-width: 300px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07); 
+            text-align: center; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+        .card:hover { transform: translateY(-8px); box-shadow: 0 12px 25px rgba(0,0,0,0.15); }
+        .card img { width: 100%; height: 160px; object-fit: cover; }
+        .card-content { padding: 20px; }
+        .card h3 { color: #1e3c72; margin-bottom: 10px; font-size: 1.3rem; }
+        .card p { font-size: 0.95rem; color: #555; }
+
+        /* Feature / Zoom Section */
+        .feature-box {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+            margin-bottom: 50px;
+        }
+        .feature-img { flex: 1 1 350px; }
+        .feature-img img { width: 100%; height: 100%; min-height: 250px; object-fit: cover; display: block; }
+        .feature-text { flex: 1 1 350px; padding: 30px; }
+        .feature-text h3 { color: #1e3c72; font-size: 1.6rem; margin-bottom: 12px; }
+        .feature-text ul { list-style: none; margin-top: 10px; }
+        .feature-text li { margin-bottom: 10px; font-size: 1rem; color: #444; }
+
+        /* Contact Box */
+        .contact-box { background: white; padding: 40px; border-radius: 14px; box-shadow: 0 5px 20px rgba(0,0,0,0.08); margin-bottom: 50px; border-top: 5px solid #27ae60; }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #dcdde1; border-radius: 8px; font-size: 15px; background-color: #fafafa; transition: 0.3s; }
+        .form-group input:focus, .form-group textarea:focus { border-color: #3498db; outline: none; background-color: #fff; }
+        
+        .btn { background: linear-gradient(135deg, #27ae60, #219653); color: white; padding: 15px 20px; border: none; border-radius: 8px; cursor: pointer; width: 100%; font-size: 18px; font-weight: bold; transition: opacity 0.3s; }
+        .btn:hover { opacity: 0.9; }
+    
+/* Professional Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    background: white;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-logo {
+    font-size: 23px;
+    font-weight: 800;
+    color: #1e3c72;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #34495e;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+    
+/* Floating Magical Effects */
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    filter: blur(2px);
+    animation: floating 6s ease-in-out infinite;
+}
+
+.hero::before {
+    width: 130px;
+    height: 130px;
+    top: 15px;
+    left: 8%;
+}
+
+.hero::after {
+    width: 90px;
+    height: 90px;
+    bottom: 10px;
+    right: 10%;
+    animation-delay: 2s;
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-25px);
+    }
+}
+
+/* Our Services Section */
+.services-section {
+    padding: 65px 20px;
+    text-align: center;
+}
+
+.services-section h2 {
+    color: #1e3c72;
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.services-intro {
+    color: #667085;
+    margin-bottom: 35px;
+    font-size: 1.05rem;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+}
+
+.service-card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 20px;
+    flex: 1 1 280px;
+    max-width: 380px;
+    box-shadow: 0 8px 30px rgba(30,60,114,0.08);
+    transition: 0.35s ease;
+    border: 1px solid #edf0fa;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(30,60,114,0.15);
+}
+
+.service-icon {
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+    color: #1e3c72;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #667085;
+    line-height: 1.8;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px 12px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .hero {
+        padding: 45px 15px;
+    }
+
+    .hero h2 {
+        font-size: 1.7rem;
+    }
+
+    .container {
+        margin: 25px auto;
+        padding: 0 14px;
+    }
+
+    .contact-box {
+        padding: 22px 16px;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+
+    .feature-text {
+        padding: 22px;
+    }
+
+    .services-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Premium Footer */
+.footer {
+    background: linear-gradient(135deg, #1e3c72, #312e81);
+    color: white;
+    padding: 45px 20px 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer h2 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.footer p {
+    color: #e0e7ff;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fcd34d;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 18px;
+    margin-top: 25px;
+    font-size: 0.9rem;
+}
+
+/* Premium Booking Form */
+.contact-box {
+    background: linear-gradient(145deg, #ffffff, #f5f3ff);
+    padding: 45px;
+    border-radius: 24px;
+    box-shadow: 0 15px 45px rgba(76, 81, 191, 0.12);
+    margin-bottom: 50px;
+    border: 1px solid #e8e5ff;
+    border-top: 5px solid #764ba2;
+}
+
+.contact-box h2 {
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+}
+
+.form-group input,
+.form-group textarea {
+    border: 1.5px solid #e0e0f0;
+    border-radius: 12px;
+    padding: 15px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 0 4px rgba(118, 75, 162, 0.12);
+    outline: none;
+}
+
+.btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 7px 20px rgba(118, 75, 162, 0.25);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(118, 75, 162, 0.35);
+}
+
+/* Hero Action Buttons */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background: white;
+    color: #5b4bb7;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.secondary-btn {
+    border: 2px solid white;
+    color: white;
+}
+
+.hero-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Why Choose Us */
+.why-section {
+    padding: 65px 20px;
+    text-align: center;
+    background: #f0efff;
+    border-radius: 25px;
+    margin-bottom: 50px;
+}
+
+.why-section h2 {
+    color: #1e3c72;
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.why-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+    margin-top: 35px;
+}
+
+.why-card {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 18px;
+    flex: 1 1 200px;
+    max-width: 260px;
+    box-shadow: 0 8px 25px rgba(30,60,114,0.07);
+    transition: 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+}
+
+.why-card span {
+    font-size: 38px;
+}
+
+.why-card h3 {
+    color: #1e3c72;
+    margin: 12px 0;
+}
+
+.why-card p {
+    color: #667085;
+    font-size: 0.95rem;
+}
+
+/* Learning Journey */
+.journey-section {
+    padding: 65px 20px;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.journey-section h2 {
+    color: #1e3c72;
+    font-size: 2.2rem;
+    margin-bottom: 12px;
+}
+
+.journey-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.journey-card {
+    flex: 1 1 230px;
+    max-width: 290px;
+    padding: 30px 22px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 28px rgba(30,60,114,0.08);
+    border: 1px solid #eeeaff;
+    transition: 0.3s ease;
+}
+
+.journey-card:hover {
+    transform: translateY(-9px);
+}
+
+.journey-number {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.journey-card h3 {
+    color: #1e3c72;
+    margin-bottom: 10px;
+}
+
+.journey-card p {
+    color: #667085;
+}
+
+/* Magical Learning Universe */
+.magic-section {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 85px 25px;
+    margin: 55px 0;
+    border-radius: 28px;
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #100b2e,
+        #30206b,
+        #5b2785,
+        #17113e
+    );
+    background-size: 300% 300%;
+    animation: magicBackground 9s ease infinite;
+}
+
+@keyframes magicBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.magic-section::before,
+.magic-section::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(55px);
+    pointer-events: none;
+}
+
+.magic-section::before {
+    width: 220px;
+    height: 220px;
+    background: rgba(190, 120, 255, 0.35);
+    top: -80px;
+    left: -50px;
+}
+
+.magic-section::after {
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 190, 90, 0.25);
+    bottom: -80px;
+    right: -40px;
+}
+
+.magic-content {
+    position: relative;
+    z-index: 2;
+}
+
+.magic-label {
+    display: inline-block;
+    padding: 9px 20px;
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 30px;
+    background: rgba(255,255,255,0.1);
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.magic-section h2 {
+    font-size: 2.7rem;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.magic-section h2 span {
+    color: #ffd580;
+}
+
+.magic-section p {
+    max-width: 650px;
+    margin: auto;
+    color: #e5ddff;
+    font-size: 1.1rem;
+    line-height: 1.9;
+}
+
+.magic-icons {
+    font-size: 35px;
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.magic-icons span {
+    display: inline-block;
+    animation: magicFloat 3s ease-in-out infinite;
+}
+
+.magic-icons span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.magic-icons span:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.magic-icons span:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+@keyframes magicFloat {
+    50% { transform: translateY(-15px) rotate(8deg); }
+}
+
+/* Premium FAQ Section */
+.faq-section {
+    max-width: 850px;
+    margin: 70px auto;
+    padding: 20px;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #1e3c72;
+    margin-bottom: 12px;
+}
+
+.faq-intro {
+    text-align: center;
+    color: #667085;
+    margin-bottom: 35px;
+}
+
+.faq-item {
+    background: white;
+    border: 1px solid #e8e5ff;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(30,60,114,0.06);
+    transition: 0.3s ease;
+}
+
+.faq-item:hover {
+    box-shadow: 0 10px 25px rgba(30,60,114,0.12);
+}
+
+.faq-item summary {
+    padding: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #1e3c72;
+    font-size: 1.05rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.faq-item summary::after {
+    content: "+";
+    color: #764ba2;
+    font-size: 23px;
+}
+
+.faq-item[open] summary::after {
+    content: "−";
+}
+
+.faq-answer {
+    padding: 0 20px 20px;
+    color: #667085;
+    line-height: 1.8;
+}
+
+/* Floating Back To Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 52px;
+    height: 52px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(76, 81, 191, 0.3);
+    z-index: 999;
+    display: none;
+    transition: 0.3s ease;
+}
+
+#backToTop:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(76, 81, 191, 0.4);
+}
+
+/* Learning Highlights */
+.stats-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 45px 20px;
+    margin: 45px 0;
+    background: linear-gradient(135deg, #eef0ff, #f8edff);
+    border-radius: 25px;
+}
+
+.stat-card {
+    flex: 1 1 180px;
+    max-width: 250px;
+    padding: 25px 15px;
+    text-align: center;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(30,60,114,.08);
+    transition: .3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-7px);
+}
+
+.stat-card span {
+    font-size: 35px;
+}
+
+.stat-card h3 {
+    color: #764ba2;
+    font-size: 1.3rem;
+    margin: 12px 0 7px;
+}
+
+.stat-card p {
+    color: #667085;
+    margin: 0;
+}
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="#home" class="nav-logo">🎓 Zahida's Hub</a>
+
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#subjects">Subjects</a>
+        <a href="#booking">Free Trial</a>
+        <a href="#services">Our Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+
+    <header id="home">
+        <span class="online-tag">💻 Live Online Classes via Zoom </span>
+        <h1>Zahida's Learning Hub</h1>
+        <p>1-on-1 Concept-Based Tutoring for Primary & Middle School Students</p>
+    </header>
+
+    <div class="hero">
+        <h2>Quality Education From the Comfort of Home</h2>
+        <p>Interactive lessons, practice worksheets, and individual attention for every child.</p>
+
+<div class="hero-buttons">
+
+    <a href="#booking" class="hero-btn primary-btn">
+        Book a Free Class →
+    </a>
+
+    <a href="#services" class="hero-btn secondary-btn">
+        Explore Our Services →
+    </a>
+
+</div>
+
+    </div>
+
+    <div class="container">
+        
+        <!-- Feature Section (Zoom/Online Study Picture) -->
+        <div class="feature-box">
+            <div class="feature-img">
+                <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80" alt="Online Tutoring Class">
+            </div>
+            <div class="feature-text">
+                <h3>Interactive Live Classes</h3>
+                <p>We provide personalized 1-on-1 online sessions tailored to your child's learning pace.</p>
+                <ul>
+                    <li>✅ Conceptual learning instead of rote memorization</li>
+                    <li>✅ Flexible timings for primary & middle school</li>
+                    <li>✅ Customized practice worksheets provided</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="subjects">Subjects Offered</h2>
+        
+        <!-- Cards Grid with Images -->
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=600&q=80" alt="English Grammar Books">
+                <div class="card-content">
+                    <h3>English Grammar</h3>
+                    <p>Grammar foundations, active/passive voice, creative writing, and vocabulary expansion.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=600&q=80" alt="Mathematics Concepts">
+                <div class="card-content">
+                    <h3>Mathematics</h3>
+                    <p>Clear step-by-step concepts, regular practice problems, and logical skill development.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Urdu and Computer Study">
+                <div class="card-content">
+                    <h3>Urdu & Computer</h3>
+                    <p>Strong Urdu reading/writing basics along with essential digital literacy for young learners.</p>
+                </div>
+            </div>
+        </div>
+
+<!-- Magical Learning Universe -->
+<section class="magic-section">
+
+    <div class="magic-content">
+
+        <div class="magic-label">
+            ✨ DISCOVER THE JOY OF LEARNING
+        </div>
+
+        <h2>
+            Every Great Future<br>
+            Begins With <span>Learning.</span>
+        </h2>
+
+        <p>
+            Every child has a unique spark.
+            Our mission is to turn curiosity into confidence,
+            knowledge into skills, and dreams into possibilities.
+        </p>
+
+        <div class="magic-icons">
+            <span>📚</span>
+            <span>💡</span>
+            <span>🎓</span>
+            <span>🚀</span>
+        </div>
+
+        <a href="#booking" class="hero-btn primary-btn">
+            Start Your Learning Journey →
+        </a>
+
+    </div>
+
+</section>
+
+<!-- Learning Highlights -->
+<section class="stats-section">
+
+    <div class="stat-card">
+        <span>🎯</span>
+        <h3>Personalized</h3>
+        <p>Learning Experience</p>
+    </div>
+
+    <div class="stat-card">
+        <span>📚</span>
+        <h3>Multiple Subjects</h3>
+        <p>Different Learning Areas</p>
+    </div>
+
+    <div class="stat-card">
+        <span>💻</span>
+        <h3>Online Classes</h3>
+        <p>Learn From Home</p>
+    </div>
+
+</section>
+
+<!-- Learning Journey Section -->
+<section class="journey-section">
+
+    <h2>Your Learning Journey Starts Here 🚀</h2>
+
+    <p>Three simple steps to begin your learning experience.</p>
+
+    <div class="journey-grid">
+
+        <div class="journey-card">
+            <div class="journey-number">1</div>
+            <h3>Book a Free Trial</h3>
+            <p>Contact us and book your first free demo class.</p>
+        </div>
+
+        <div class="journey-card">
+            <div class="journey-number">2</div>
+            <h3>Meet Your Teacher</h3>
+            <p>Discuss your learning needs and choose suitable timings.</p>
+        </div>
+
+        <div class="journey-card">
+            <div class="journey-number">3</div>
+            <h3>Start Learning</h3>
+            <p>Enjoy interactive lessons and improve your skills.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-section">
+
+    <h2>Why Choose Us? ✨</h2>
+
+    <p>Making learning simple, enjoyable and effective.</p>
+
+    <div class="why-grid">
+
+        <div class="why-card">
+            <span>🎯</span>
+            <h3>Personal Attention</h3>
+            <p>Every student gets individual attention and guidance.</p>
+        </div>
+
+        <div class="why-card">
+            <span>💡</span>
+            <h3>Concept-Based Learning</h3>
+            <p>Understand concepts clearly instead of memorizing everything.</p>
+        </div>
+
+        <div class="why-card">
+            <span>🕒</span>
+            <h3>Flexible Timings</h3>
+            <p>Learn comfortably with suitable class timings.</p>
+        </div>
+
+        <div class="why-card">
+            <span>📚</span>
+            <h3>Practice Support</h3>
+            <p>Improve your skills through practice and learning activities.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Our Services Section -->
+<section class="services-section" id="services">
+
+    <h2>What We Offer</h2>
+
+    <p class="services-intro">
+        Helping students learn better and businesses grow online.
+    </p>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <div class="service-icon">🎓</div>
+            <h3>Online Tutoring</h3>
+            <p>
+                Personalized online classes for primary and
+                middle school students with concept-based learning,
+                practice and individual attention.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <div class="service-icon">💻</div>
+            <h3>Website Development</h3>
+            <p>
+                Beautiful, modern and user-friendly websites
+                designed for individuals, students and small
+                businesses to build their online presence.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+  <h2>Frequently Asked Questions</h2>
+  <p class="faq-intro">Everything you need to know before getting started.</p>
+
+  <details class="faq-item">
+    <summary>Are the classes online?</summary>
+    <div class="faq-answer">Yes. Classes are conducted online using a suitable video meeting platform. Details can be discussed after you contact us.</div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Which grades do you teach?</summary>
+    <div class="faq-answer">We currently focus on primary and middle school students. Share the student's grade through our inquiry form to confirm availability.</div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Can I book a free trial class?</summary>
+    <div class="faq-answer">Yes. Submit the free trial inquiry form to discuss a suitable demo class time.</div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Which subjects are available?</summary>
+    <div class="faq-answer">English Grammar, Mathematics, Urdu and Computer are currently listed on our website.</div>
+  </details>
+
+  <details class="faq-item">
+    <summary>Can you build a website for my business?</summary>
+    <div class="faq-answer">Yes. Use the contact form to describe the type of website you need.</div>
+  </details>
+</section>
+
+        <!-- Contact Form -->
+        <div class="contact-box" id="booking">
+            <h2 style="text-align: center; margin-bottom: 10px; color: #1e3c72;">Book a Free Trial Class</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 25px;">Fill out the form below to schedule a demo class for your child:</p>
+            
+            <form id="contact" action="https://formspree.io/f/xyekraqb" method="POST">
+                <div class="form-group">
+                    <label>Student / Parent Name:</label>
+                    <input type="text" name="name" placeholder="Enter full name" required>
+                </div>
+                <div class="form-group">
+                    <label>Grade / Class:</label>
+                    <input type="text" name="grade" placeholder="e.g., Grade 4" required>
+                </div>
+                <div class="form-group">
+                    <label>Subject Needed:</label>
+                    <input type="text" name="subject" placeholder="e.g., English Grammar / Maths" required>
+                </div>
+                <div class="form-group">
+                    <label>Your Message / Requirements:</label>
+                    <textarea name="message" rows="4" placeholder="Write your specific requirements or preferred timing..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Submit Inquiry</button>
+            </form>
+        </div>
+
+    </div>
+
+<!-- Website Footer -->
+<footer class="footer">
+
+    <h2>🎓 Zahida's Learning Hub</h2>
+
+    <p>
+        Learn Better. Grow Smarter. Build Your Future.
+    </p>
+
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#subjects">Subjects</a>
+        <a href="#services">Our Services</a>
+        <a href="#booking">Free Trial</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Zahida's Learning Hub. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
+<button id="backToTop" title="Back to Top">↑</button>
+
+<script>
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", function () {
+    if (window.scrollY > 300) {
+        backToTop.style.display = "block";
+    } else {
+        backToTop.style.display = "none";
+    }
+});
+
+backToTop.addEventListener("click", function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+</script>
+
+</body>
+</html>
